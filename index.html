@@ -11,11 +11,35 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style type="text/tailwindcss">
         @theme {
-            --color-primary-lightest: #F0F9FF;
-            --color-primary-light: #CFF5FC;
-            --color-primary-medium: #83E4F0;
-            --color-primary-dark: #30AFC0;
+            --color-primary-lightest: #F9F7F7;
+            --color-primary-light: #DBE2EF;
+            --color-primary-medium: #3F72AF;
+            --color-primary-dark: #112D4E;
             --color-text-dark: #1F2937;
+        }
+
+        .section-style {
+            @apply mb-8 border-b-2 border-primary-dark shadow-lg;
+        }
+
+        .headquarter-items {
+            @apply text-center w-3/4 md:w-auto
+        }
+
+        .headquarter-item {
+            @apply w-32 h-32 md:w-40 md:h-40 bg-primary-light rounded-full border-4 border-primary-dark flex items-center justify-center mx-auto mb-4 hover:shadow-xl transition duration-300
+        }
+
+        .headquarter-item-text {
+            @apply text-2xl font-semibold text-primary-medium
+        }
+
+        .form-label {
+            @apply block text-sm font-medium
+        }
+
+        .input-text-box {
+            @apply mt-1 block w-full border border-gray-300 rounded-md shadow-sm p-1 focus:ring-primary-dark focus:border-primary-medium
         }
 
         body {
@@ -25,13 +49,14 @@
 </head>
 
 <body class="bg-primary-lightest text-text-dark min-h-screen flex flex-col">
+    <!-- Header -->
     <header class="sticky top-0 z-10 bg-white shadow-lg">
         <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
             <div class="flex item-center space-x-2">
                 <!-- Website Logo -->
                 <a href="index.html" class="flex items-center space-x-2">
                     <div
-                        class="h-8 w-8 bg-primary-dark rounded-full flex items-center justify-center text-xl font-bold text-white shadow-md">
+                        class="h-8 w-8 bg-primary-medium rounded-full flex items-center justify-center text-xl font-bold text-white shadow-md">
                         😊</div>
                     <span class="text-xl font-semibold text-text-dark hidden sm:block">My Website</span>
                 </a>
@@ -40,19 +65,21 @@
             <nav class="hidden md:block">
                 <ul type="none" class="flex space-x-6 text-lg font-medium">
                     <li><a href="index.html"
-                            class="hover:text-primary-dark transition duration-200 cursor-pointer">Home</a></li>
+                            class="hover:text-primary-medium transition duration-200 cursor-pointer">Home</a></li>
                     <li><a href="profile.html"
-                            class="hover:text-primary-dark transition duration-200 cursor-pointer">Our Profile</a></li>
-                    <li><a href="#" class="hover:text-primary-dark transition duration-200 cursor-pointer">Portfolio</a>
+                            class="hover:text-primary-medium transition duration-200 cursor-pointer">Our Profile</a>
+                    </li>
+                    <li><a href="#"
+                            class="hover:text-primary-medium transition duration-200 cursor-pointer">Portfolio</a>
                     </li>
                     <li><a href="index.html#message-us-section"
-                            class="bg-primary-dark text-white px-4 py-2 rounded-lg hover:opacity-90 hover:text-primary-light transition duration-200 shadow-md">Message
+                            class="bg-primary-medium text-white px-4 py-2 rounded-lg hover:opacity-90 hover:text-primary-light transition duration-200 shadow-md">Message
                             us</a></li>
                 </ul>
             </nav>
             <!-- Mobile Menu -->
             <button id="mobile-menu-button"
-                class="md:hidden text-[var(--color-text-dark)] hover:text-[var(--color-primary-dark)] focus:outline-none">
+                class="md:hidden text-text-dark hover:text-primary-medium focus:outline-none">
                 <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
                     xmlns="http://www.w3.org/2000/svg">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7">
@@ -65,101 +92,114 @@
             <a href="profile.html" class="block px-4 py-2 hover:bg-primary-lightest">Our Profile</a>
             <a href="#" class="block px-4 py-2 hover:bg-primary-lightest">Portfolio</a>
             <a href="index.html#message-us-section"
-                class="block px-4 py-2 bg-primary-dark text-white hover:opacity-90">Message Us</a>
+                class="block px-4 py-2 bg-primary-medium text-white hover:opacity-90 hover:text-primary-light">Message
+                Us</a>
         </div>
     </header>
 
     <!-- Main Web -->
-    <main>
+    <main class="flex-grow">
         <!-- banner section -->
-        <section>
-            <div>
-                <h1>Hi <span>Name</span>, Welcome To Website</h1>
-                <p>Ini adalah website latihan pertama</p>
+        <section class="section-style">
+            <div class="relative bg-cover bg-center h-64 sm:h-96 md:h-128 border-y"
+                style="background-image: url('https://picsum.photos/1366/578');">
+                <div class="mt-8 bg-primary-lightest/20">
+                    <h1 class="text-4xl font-extrabold px-4 sm:px-6 lg:px-8">Hi <span id="welcome-name"
+                            class="text-primary-medium">Name</span>, Welcome To Website</h1>
+                    <p class="mt-2 text-lg px-4 sm:px-6 lg:px-8">Ini adalah website latihan pertama</p>
+                </div>
             </div>
         </section>
 
         <!-- Headquarter Section -->
-        <section>
-            <div>
-                <h2>Our Headquarter</h2>
-                <div>
-                    <div>
-                        <div>
-                            <!-- img -->
+        <section class="section-style">
+            <div class="pb-12 px-4 sm:px-6 lg:px-8">
+                <h2 class="text-3xl font-bold mb-12">Our Headquarter</h2>
+                <div class="flex flex-col md:flex-row justify-around items-center space-y-8 md:space-y-0">
+                    <div class="headquarter-items">
+                        <div class="headquarter-item">
+                            <span class="headquarter-item-text">JKT</span>
                         </div>
-                        <h4>Jakarta</h4>
+                        <h4 class="text-lg font-medium">Jakarta</h4>
                     </div>
-                    <div>
-                        <div>
-                            <!-- img -->
+                    <div class="headquarter-items">
+                        <div class="headquarter-item">
+                            <span class="headquarter-item-text">BDG</span>
                         </div>
-                        <h4>Bandung</h4>
+                        <h4 class="text-lg font-medium">Bandung</h4>
                     </div>
-                    <div>
-                        <div>
-                            <!-- img -->
+                    <div class="headquarter-items">
+                        <div class="headquarter-item">
+                            <span class="headquarter-item-text">SBY</span>
                         </div>
-                        <h4>Surabaya</h4>
+                        <h4 class="text-lg font-medium">Surabaya</h4>
                     </div>
                 </div>
             </div>
         </section>
 
         <!-- Message Us Section -->
-        <section id="message-us-section">
-            <div>
-                <h2>Message Us</h2>
-                <div>
-                    <form id="message-form">
+        <section id="message-us-section" class="section-style border-none !shadow-none">
+            <div class="px-4 sm:px-6 lg:px-8">
+                <h2 class="text-3xl font-bold mb-8">Message Us</h2>
+                <div class="flex flex-col lg:flex-row lg:space-x-10">
+                    <!-- Form -->
+                    <form id="message-form"
+                        class="lg:w-1/2 space-y-4 p-6 bg-primary-light rounded-lg border border-primary-dark shadow-md">
 
                         <div>
-                            <label for="name">Nama :</label>
-                            <input type="text" id="name" name="name" placeholder="Nama" required>
+                            <label for="name" class="form-label">Nama :</label>
+                            <input type="text" id="name" name="name" placeholder="Nama" class="input-text-box" required>
                         </div>
 
                         <div>
-                            <label>Tanggal Lahir :</label>
+                            <label for="date-of-birth" class="form-label">Tanggal Lahir :</label>
                             <div>
-                                <input type="date" id="date_of_birth" name="date_of_birth" placeholder="Nama" required>
+                                <input type="date" id="date_of_birth" name="date_of_birth" placeholder="Nama"
+                                    class="input-text-box" required>
                             </div>
                         </div>
 
                         <div>
-                            <label for="gender">Jenis Kelamin :</label>
-                            <label>
-                                <input type="radio" id="gender" value="Laki-laki" required>
-                                <span>Laki-Laki</span>
+                            <label for="gender" class="form-label">Jenis Kelamin :</label>
+                            <label class="flex space-x-4">
+                                <input type="radio" name="gender" value="Laki-laki" class="form-radio text-primary-medium" required>
+                                <span class="ml-2">Laki-Laki</span>
                             </label>
-                            <label>
-                                <input type="radio" id="gender" value="Perempuan" required>
-                                <span>Perempuan</span>
+                            <label class="flex space-x-4">
+                                <input type="radio" name="gender" value="Perempuan" class="form-radio text-primary-medium" required>
+                                <span class="ml-2">Perempuan</span>
                             </label>
                         </div>
 
                         <div>
-                            <label for="message">Pesan :</label>
+                            <label for="message" class="form-label">Pesan :</label>
                             <textarea name="message" id="message" rows="5" cols="25"
-                                placeholder="Tulis pesan anda disini..." required></textarea>
+                                placeholder="Tulis pesan anda disini..." class="input-text-box" required></textarea>
                         </div>
 
-                        <button type="Submit">Submit</button>
+                        <button type="Submit" class="w-full lg:w-auto bg-primary-medium text-white py-2 px-6 rounded-md shadow-lg hover:opacity-90 transition duration-150 font-semibold">Submit</button>
                     </form>
-
-                    <div>
-                        <h3>Data Pengisian Form</h3>
-                        <div>
-                            <p><b>Current time :</b></p>
-                            <p><b>Nama :</b></p>
-                            <p><b>Tanggal Lahir :</b></p>
-                            <p><b>Jenis Kelamin :</b></p>
-                            <p><b>Pesan :</b></p>
+                    <!-- Data Hasil Pengisian Form -->
+                    <div class="lg:w-1/2 mt-10 lg:mt-0 space-y-4 p-6 bg-primary-light rounded-lg border border-primary-dark shadow-md">
+                        <h3 class="text-lg font-bold border-b pb-2 mb-4 text-primary-medium">Data Pengisian Form</h3>
+                        <div class="space-y-3" id="submission-output">
+                            <p class="pb-6"><b>Current time : <span id="output-current-time" class="font-normal"></span> </b></p>
+                            <p><b>Nama :</b><span id="output-name" class="font-normal"></span></p>
+                            <p><b>Tanggal Lahir :</b><span id="output-dob" class="font-normal"></span></p>
+                            <p><b>Jenis Kelamin :</b><span id="output-gender" class="font-normal"></span></p>
+                            <p><b>Pesan :</b><span id="output-message" class="font-normal"></span></p>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
     </main>
+
+    <!-- Footer -->
+    <footer class="mt-auto bg-primary-dark text-white py-4 text-right text-sm pr-4">
+        <p>Created by Hynkel | &copy; 2025 My Website</p>
+    </footer>
 </body>
 
 </html>
