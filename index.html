@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Website</title>
+</head>
+
+<body>
+    <header>
+        <div>
+            <div>
+                <!-- Website Logo -->
+                <a href="index.html">
+                    <div>😊</div>
+                    <span>My Website</span>
+                </a>
+                <!-- Desktop Menu -->
+                <nav>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="profile.html">Our Profile</a></li>
+                        <li><a href="#">Portfolio</a></li>
+                        <li><a href="index.html#message-us-section">Message us</a></li>
+                    </ul>
+                </nav>
+                <!-- Mobile Menu -->
+                <button id="mobile-menu-button">
+
+                </button>
+            </div>
+        </div>
+        <div id="mobile-menu">
+            <a href="index.html">Home</a>
+            <a href="profile.html">Our Profile</a>
+            <a href="#">Portfolio</a>
+            <a href="index.html#message-us-section">Message Us</a>
+        </div>
+    </header>
+
+    <!-- Main Web -->
+    <main>
+        <!-- banner section -->
+        <section>
+            <div>
+                <h1>Hi <span>Name</span>, Welcome To Website</h1>
+                <p>Ini adalah website latihan pertama</p>
+            </div>
+        </section>
+
+        <!-- Headquarter Section -->
+        <section>
+            <div>
+                <h2>Our Headquarter</h2>
+                <div>
+                    <div>
+                        <div>
+                            <!-- img -->
+                        </div>
+                        <h4>Jakarta</h4>
+                    </div>
+                    <div>
+                        <div>
+                            <!-- img -->
+                        </div>
+                        <h4>Bandung</h4>
+                    </div>
+                    <div>
+                        <div>
+                            <!-- img -->
+                        </div>
+                        <h4>Surabaya</h4>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Message Us Section -->
+        <section id="message-us-section">
+            <div>
+                <h2>Message Us</h2>
+                <div>
+                    <form id="message-form">
+
+                        <div>
+                            <label for="name">Nama :</label>
+                            <input type="text" id="name" name="name" placeholder="Nama" required>
+                        </div>
+
+                        <div>
+                            <label>Tanggal Lahir :</label>
+                            <div>
+                                <input type="date" id="date_of_birth" name="date_of_birth" placeholder="Nama" required>
+                            </div>
+                        </div>
+
+                        <div>
+                            <label for="gender">Jenis Kelamin :</label>
+                            <label>
+                                <input type="radio" id="gender" value="Laki-laki" required>
+                                <span>Laki-Laki</span>
+                            </label>
+                            <label>
+                                <input type="radio" id="gender" value="Perempuan" required>
+                                <span>Perempuan</span>
+                            </label>
+                        </div>
+
+                        <div>
+                            <label for="message">Pesan :</label>
+                            <textarea name="message" id="message" rows="5" cols="25" placeholder="Tulis pesan anda disini..." required></textarea>
+                        </div>
+
+                        <button type="Submit">Submit</button>
+                    </form>
+
+                    <div>
+                        <h3>Data Pengisian Form</h3>
+                        <div>
+                            <p><b>Current time :</b></p>
+                            <p><b>Nama :</b></p>
+                            <p><b>Tanggal Lahir :</b></p>
+                            <p><b>Jenis Kelamin :</b></p>
+                            <p><b>Pesan :</b></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+
+</html>
