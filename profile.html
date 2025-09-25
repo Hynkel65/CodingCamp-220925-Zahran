@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Website</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style type="text/tailwindcss">
+        @theme {
+            --color-primary-lightest: #F9F7F7;
+            --color-primary-light: #DBE2EF;
+            --color-primary-medium: #3F72AF;
+            --color-primary-dark: #112D4E;
+            --color-text-dark: #1F2937;
+        }
+
+        .section-style {
+            @apply mb-8 border-b-2 border-primary-dark shadow-lg;
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
+</head>
+
+<body class="bg-primary-lightest text-text-dark min-h-screen flex flex-col">
+    <!-- Header -->
+    <header class="sticky top-0 z-10 bg-white shadow-lg">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
+            <div class="flex item-center space-x-2">
+                <!-- Website Logo -->
+                <a href="index.html" class="flex items-center space-x-2">
+                    <div
+                        class="h-8 w-8 bg-primary-medium rounded-full flex items-center justify-center text-xl font-bold text-white shadow-md">
+                        😊</div>
+                    <span class="text-xl font-semibold text-text-dark hidden sm:block">My Website</span>
+                </a>
+            </div>
+            <!-- Desktop Menu -->
+            <nav class="hidden md:block">
+                <ul type="none" class="flex space-x-6 text-lg font-medium">
+                    <li><a href="index.html"
+                            class="hover:text-primary-medium transition duration-200 cursor-pointer">Home</a></li>
+                    <li><a href="profile.html"
+                            class="hover:text-primary-medium transition duration-200 cursor-pointer">Our Profile</a>
+                    </li>
+                    <li><a href="#"
+                            class="hover:text-primary-medium transition duration-200 cursor-pointer">Portfolio</a>
+                    </li>
+                    <li><a href="index.html#message-us-section"
+                            class="bg-primary-medium text-white px-4 py-2 rounded-lg hover:opacity-90 hover:text-primary-light transition duration-200 shadow-md">Message
+                            us</a></li>
+                </ul>
+            </nav>
+            <!-- Mobile Menu -->
+            <button id="mobile-menu-button"
+                class="md:hidden text-text-dark hover:text-primary-medium focus:outline-none">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7">
+                    </path>
+                </svg>
+            </button>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden bg-white shadow-md border-t border-primary-light">
+            <a href="index.html" class="block px-4 py-2 hover:bg-primary-lightest">Home</a>
+            <a href="profile.html" class="block px-4 py-2 hover:bg-primary-lightest">Our Profile</a>
+            <a href="#" class="block px-4 py-2 hover:bg-primary-lightest">Portfolio</a>
+            <a href="index.html#message-us-section"
+                class="block px-4 py-2 bg-primary-medium text-white hover:opacity-90 hover:text-primary-light">Message
+                Us</a>
+        </div>
+    </header>
+
+    <!-- Main Web -->
+    <main class="flex-grow">
+        <!-- banner section -->
+        <section class="section-style">
+            <div class="relative bg-cover bg-center h-64 sm:h-96 md:h-128 border-y"
+                style="background-image: url('https://picsum.photos/1366/578');">
+                <div class="mt-8 bg-primary-lightest/20">
+                    <h1 class="text-4xl font-extrabold px-4 sm:px-6 lg:px-8">Hi <span id="welcome-name"
+                            class="text-primary-medium">Nama</span>, Welcome To Website</h1>
+                    <p class="mt-2 text-lg px-4 sm:px-6 lg:px-8">Ini adalah website latihan pertama</p>
+                </div>
+            </div>
+        </section>
+        <H1>In Maintenance</H1>
+    </main>
+
+    <!-- Footer -->
+    <footer class="mt-auto bg-primary-dark text-white py-4 text-right text-sm pr-4">
+        <p>Created by Hynkel | &copy; 2025 My Website</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>
