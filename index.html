@@ -5,37 +5,67 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Website</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style type="text/tailwindcss">
+        @theme {
+            --color-primary-lightest: #F0F9FF;
+            --color-primary-light: #CFF5FC;
+            --color-primary-medium: #83E4F0;
+            --color-primary-dark: #30AFC0;
+            --color-text-dark: #1F2937;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
 </head>
 
-<body>
-    <header>
-        <div>
-            <div>
+<body class="bg-primary-lightest text-text-dark min-h-screen flex flex-col">
+    <header class="sticky top-0 z-10 bg-white shadow-lg">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
+            <div class="flex item-center space-x-2">
                 <!-- Website Logo -->
-                <a href="index.html">
-                    <div>😊</div>
-                    <span>My Website</span>
+                <a href="index.html" class="flex items-center space-x-2">
+                    <div
+                        class="h-8 w-8 bg-primary-dark rounded-full flex items-center justify-center text-xl font-bold text-white shadow-md">
+                        😊</div>
+                    <span class="text-xl font-semibold text-text-dark hidden sm:block">My Website</span>
                 </a>
-                <!-- Desktop Menu -->
-                <nav>
-                    <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="profile.html">Our Profile</a></li>
-                        <li><a href="#">Portfolio</a></li>
-                        <li><a href="index.html#message-us-section">Message us</a></li>
-                    </ul>
-                </nav>
-                <!-- Mobile Menu -->
-                <button id="mobile-menu-button">
-
-                </button>
             </div>
+            <!-- Desktop Menu -->
+            <nav class="hidden md:block">
+                <ul type="none" class="flex space-x-6 text-lg font-medium">
+                    <li><a href="index.html"
+                            class="hover:text-primary-dark transition duration-200 cursor-pointer">Home</a></li>
+                    <li><a href="profile.html"
+                            class="hover:text-primary-dark transition duration-200 cursor-pointer">Our Profile</a></li>
+                    <li><a href="#" class="hover:text-primary-dark transition duration-200 cursor-pointer">Portfolio</a>
+                    </li>
+                    <li><a href="index.html#message-us-section"
+                            class="bg-primary-dark text-white px-4 py-2 rounded-lg hover:opacity-90 hover:text-primary-light transition duration-200 shadow-md">Message
+                            us</a></li>
+                </ul>
+            </nav>
+            <!-- Mobile Menu -->
+            <button id="mobile-menu-button"
+                class="md:hidden text-[var(--color-text-dark)] hover:text-[var(--color-primary-dark)] focus:outline-none">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7">
+                    </path>
+                </svg>
+            </button>
         </div>
-        <div id="mobile-menu">
-            <a href="index.html">Home</a>
-            <a href="profile.html">Our Profile</a>
-            <a href="#">Portfolio</a>
-            <a href="index.html#message-us-section">Message Us</a>
+        <div id="mobile-menu" class="hidden md:hidden bg-white shadow-md border-t border-primary-light">
+            <a href="index.html" class="block px-4 py-2 hover:bg-primary-lightest">Home</a>
+            <a href="profile.html" class="block px-4 py-2 hover:bg-primary-lightest">Our Profile</a>
+            <a href="#" class="block px-4 py-2 hover:bg-primary-lightest">Portfolio</a>
+            <a href="index.html#message-us-section"
+                class="block px-4 py-2 bg-primary-dark text-white hover:opacity-90">Message Us</a>
         </div>
     </header>
 
@@ -109,7 +139,8 @@
 
                         <div>
                             <label for="message">Pesan :</label>
-                            <textarea name="message" id="message" rows="5" cols="25" placeholder="Tulis pesan anda disini..." required></textarea>
+                            <textarea name="message" id="message" rows="5" cols="25"
+                                placeholder="Tulis pesan anda disini..." required></textarea>
                         </div>
 
                         <button type="Submit">Submit</button>
