@@ -117,7 +117,7 @@
         <section class="section-style">
             <div class="relative bg-cover bg-center h-64 sm:h-96 md:h-128 border-y"
                 style="background-image: url('https://picsum.photos/1366/578');">
-                <div class="mt-8 bg-primary-lightest/20">
+                <div class="mt-8 bg-primary-lightest/80">
                     <h1 class="text-4xl font-extrabold px-4 sm:px-6 lg:px-8">Hi <span id="welcome-name"
                             class="text-primary-medium">Nama</span>, Welcome To Website</h1>
                     <p class="mt-2 text-lg px-4 sm:px-6 lg:px-8">Ini adalah website latihan pertama</p>
@@ -163,39 +163,47 @@
 
                         <div>
                             <label for="name" class="form-label">Nama :</label>
-                            <input type="text" id="name" name="name" placeholder="Nama" class="input-text-box" required>
+                            <input type="text" id="name" name="name" placeholder="Nama" class="input-text-box" >
+                            <p id="name-error" class="text-sm text-red-500 mt-1 hidden">Nama harus di isi.</p>
                         </div>
 
                         <div>
                             <label for="date-of-birth" class="form-label">Tanggal Lahir :</label>
                             <div>
                                 <input type="date" id="date-of-birth" name="date-of-birth" class="input-text-box"
-                                    required>
+                                    >
                             </div>
+                            <p id="dob-error" class="text-sm text-red-500 mt-1 hidden">Tanggal lahir harus di isi.</p>
                         </div>
 
                         <div>
                             <label for="gender" class="form-label">Jenis Kelamin :</label>
                             <label class="flex space-x-4">
                                 <input type="radio" name="gender" value="Laki-laki"
-                                    class="form-radio text-primary-medium" required>
+                                    class="form-radio text-primary-medium" >
                                 <span class="ml-2">Laki-Laki</span>
                             </label>
                             <label class="flex space-x-4">
                                 <input type="radio" name="gender" value="Perempuan"
-                                    class="form-radio text-primary-medium" required>
+                                    class="form-radio text-primary-medium" >
                                 <span class="ml-2">Perempuan</span>
                             </label>
+                            <p id="gender-error" class="text-sm text-red-500 mt-1 hidden">Jenis kelamin harus di pilih.</p>
                         </div>
 
                         <div>
                             <label for="message" class="form-label">Pesan :</label>
                             <textarea name="message" id="message" rows="5" cols="25"
-                                placeholder="Tulis pesan anda disini..." class="input-text-box" required></textarea>
+                                placeholder="Tulis pesan anda disini..." class="input-text-box" ></textarea>
+                            <p id="message-error" class="text-sm text-red-500 mt-1 hidden">Pesan harus di isi.</p>
                         </div>
 
                         <button type="Submit"
-                            class="w-full lg:w-auto bg-primary-medium text-white py-2 px-6 rounded-md shadow-lg hover:opacity-90 transition duration-150 font-semibold">Submit</button>
+                            class="w-full bg-primary-medium text-white py-2 px-6 rounded-md shadow-lg hover:opacity-90 transition duration-150 font-semibold">Submit</button>
+                        <div id="submission-success"
+                            class="mt-4 p-3 bg-green-100 border-l-4 border-green-500 text-green-700 opacity-0 transition-opacity duration-500 invisible">
+                            Pesan berhasil dikirim!
+                        </div>
                     </form id="message-form">
                     <!-- submission Form-->
                     <div

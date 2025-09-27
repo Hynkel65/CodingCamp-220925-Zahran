@@ -18,9 +18,6 @@
             --color-text-dark: #1F2937;
         }
 
-        .section-style {
-            @apply mb-8 border-b-2 border-primary-dark shadow-lg;
-        }
         body {
             font-family: 'Inter', sans-serif;
         }
@@ -76,20 +73,82 @@
         </div>
     </header>
 
+    <!-- Banner section -->
+    <section class="mb-12">
+        <div class="relative bg-cover bg-center h-64 sm:h-96 md:h-128 border-y"
+            style="background-image: url('https://picsum.photos/1366/578');">
+        </div>
+    </section>
+
     <!-- Main Web -->
-    <main class="flex-grow">
-        <!-- banner section -->
-        <section class="section-style">
-            <div class="relative bg-cover bg-center h-64 sm:h-96 md:h-128 border-y"
-                style="background-image: url('https://picsum.photos/1366/578');">
-                <div class="mt-8 bg-primary-lightest/20">
-                    <h1 class="text-4xl font-extrabold px-4 sm:px-6 lg:px-8">Hi <span id="welcome-name"
-                            class="text-primary-medium">Nama</span>, Welcome To Website</h1>
-                    <p class="mt-2 text-lg px-4 sm:px-6 lg:px-8">Ini adalah website latihan pertama</p>
-                </div>
+    <main class="flex-grow max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+        <!-- About Section -->
+        <section class="mb-12 p-8 bg-white rounded-xl shadow-xl border-l-4 border-primary-medium">
+            <h2 class="text-3xl font-bold mb-6 text-primary-medium">Tentang Perusahaan</h2>
+            <div class="text-gray-700 space-y-4 text-lg">
+                <p>
+                    <b>My Website</b> didirikan pada tahun 2025 dengan tujuan menjadi <i>platform</i> teknologi edukasi
+                    terdepan. Kami fokus pada pengembangan solusi web yang <b>intuitif, cepat, dan responsif</b> untuk
+                    mendukung pertumbuhan talenta digital.
+                </p>
+                <p>
+                    Beroperasi dari Jakarta, Bandung, dan Surabaya, kami mengedepankan <b>kolaborasi, inovasi, dan
+                        integritas</b>. Kami bukan hanya membangun produk, tetapi juga membangun hubungan jangka panjang
+                    dengan klien dan komunitas.
+                </p>
             </div>
         </section>
-        <H1>In Maintenance</H1>
+
+        <section class="mb-12 grid grid-cols-1 lg:grid-cols-3 gap-8">
+            <div
+                class="lg:col-span-1 p-8 bg-primary-dark text-white rounded-xl shadow-xl flex flex-col justify-center transform hover:scale-[1.02] transition duration-300">
+                <h2 class="text-2xl font-bold mb-4 flex items-center">
+                    <svg class="w-6 h-6 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z">
+                        </path>
+                    </svg>
+                    Visi
+                </h2>
+                <p class="text-xl italic mt-4 font-light">
+                    "Menjadi penggerak utama dalam inovasi teknologi digital yang berfokus pada solusi bisnis
+                    berkelanjutan."
+                </p>
+            </div>
+
+            <div class="lg:col-span-2 p-8 bg-white rounded-xl shadow-xl border-r-4 border-primary-medium">
+                <h2 class="text-2xl font-bold text-primary-medium mb-6 flex items-center">
+                    <svg class="w-6 h-6 mr-3 text-primary-medium" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                    </svg>
+                    Misi
+                </h2>
+                <ul class="text-gray-700 space-y-3 pl-4 text-lg">
+                    <li class="flex items-start">
+                        <p>
+                            Memberikan layanan pengembangan aplikasi dan website yang <b>mutakhir</b>.
+                        </p>
+                    </li>
+                    <li class="flex items-start">
+                        <p>
+                            Menciptakan lingkungan kerja yang kolaboratif dan mendorong <b>pembelajaran berkelanjutan
+                        </p>
+                        </b>.
+                    </li>
+                    <li class="flex items-start">
+                        <p>
+                            Memastikan semua produk memenuhi standar<b>aksesibilitas dan keamanan </b>tertinggi.
+                        </p>
+                    </li>
+                </ul>
+            </div>
+        </section>
     </main>
 
     <!-- Footer -->
